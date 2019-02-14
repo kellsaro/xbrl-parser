@@ -9,9 +9,13 @@ web application at https://github.com/kellsaro/xbrl-web.git
 ## How to use it
 
 Having an object InputStream with de xml <document.xbrl>:
+
 .Create a javax.xml.parsers.DocumentBuilder object:  DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+
 .Parse the fileInputStream: Document doc = documentBuilder.parse(fileInputStream);
+
 .Create an object XbrlParser: XbrlParser xbrlParser = XbrlParser(doc, inputStream.getOriginalFileName(), inputStream.getSize());
+
 .Get the JSON: String json = xbrlParser.parseToJSON();  
 
 ## Notes from the original project
